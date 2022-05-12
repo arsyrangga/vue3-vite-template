@@ -16,6 +16,17 @@
   @apply bg-blue-700;
 }
 
+body::-webkit-scrollbar {
+  width: 5px; /* width of the entire scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: transparent; /* color of the tracking area */
+}
+body::-webkit-scrollbar-thumb {
+  @apply bg-blue-500;
+  border-radius: 20px; /* roundness of the scroll thumb */
+}
+
 @media (max-width: 500px) {
   .for-pc {
     display: none;
@@ -23,5 +34,15 @@
 
   .for-mobile {
     display: flex !important;
+  }
+
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  body::-webkit-scrollbar-track {
+    display: none;
+  }
+  body::-webkit-scrollbar-thumb {
+    display: none;
   }
 }
